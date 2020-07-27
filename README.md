@@ -13,7 +13,7 @@ This package makes it easy to get up and running with a Docker environment conta
 
 To being working with this project the following steps must be taken.
 
-1. Run `composer create-project anterisdev/skaffold-laravel` in your project directory. This will download the project files.
+1. Run `composer create-project anteris-dev/skaffold-laravel=dev-master` in your project directory. This will download the project files.
 2. (Optional) If you have an existing Laravel project, copy it into the `src` directory.
 3. Run `docker-compose up -d` in your project directory. If no Laravel files are found in the `src` directory, a new Laravel project will be created. This may take a few moments.
 4. Go to `http://localhost` to view your Laravel website!
