@@ -2,11 +2,17 @@
     "name": "anteris-dev/skaffold-laravel",
     "description": "Skaffolds a Laravel project ready to run in a Docker container.",
     "type": "project",
+    "license": "MIT",
     "authors": [
         {
             "name": "Aidan Casey",
             "email": "aidan.casey@anteris.com"
         }
+    ],
+    "keywords": [
+        "laravel",
+        "skaffold",
+        "docker"
     ],
     "require": {}
 }
