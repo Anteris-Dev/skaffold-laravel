@@ -1,0 +1,9 @@
+#
+# This file is a template environment file that gets copied into your image.
+# You can modify values here, but for the most part we recommend passing
+# environment variables to the container.
+#
+APP_NAME=Laravel
+APP_KEY=
+APP_ENV=production
+APP_DEBUG=false

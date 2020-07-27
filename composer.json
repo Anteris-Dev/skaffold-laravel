@@ -1,0 +1,12 @@
+{
+    "name": "anteris-dev/skaffold-laravel",
+    "description": "Skaffolds a Laravel project ready to run in a Docker container.",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Aidan Casey",
+            "email": "aidan.casey@anteris.com"
+        }
+    ],
+    "require": {}
+}
