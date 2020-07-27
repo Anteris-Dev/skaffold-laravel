@@ -1,4 +1,6 @@
 # About this Package
+**Warning:** This package is still in development. While we appreciate testers, we do not recommend using this in production yet.
+
 This package makes it easy to get up and running with a Docker environment containing Laravel. It gives you the tools you need to begin developing and then build this into a Docker image for production.
 
 * **Note:** While you have complete freedom to modify the Nginx configuration files, we assume that this application will be behind a proxy that handles SSL settings, as opposed to that being something that directly effects this app. For this reason, SSL settings are not included by default.
