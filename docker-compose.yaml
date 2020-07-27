@@ -40,7 +40,7 @@ services:
     #
     workspace:
         # Create a Laravel project if the source directory is empty
-        command: /bin/sh -c 'if [ ! "$$(ls -A /var/www/app | grep -v -i *git*)" ]; then composer create-project laravel/laravel /var/www/app; fi && php -a'
+        command: /bin/sh -c 'if [ ! "$$(ls -A /var/www/app | grep -v -i git)" ]; then composer create-project laravel/laravel /var/www/app; fi && php -a'
         environment:
             - DB_CONNECTION=mysql
             - DB_HOST=mysql
