@@ -1,0 +1,4 @@
+./.data
+src/.env
+src/node_modules
+src/vendor

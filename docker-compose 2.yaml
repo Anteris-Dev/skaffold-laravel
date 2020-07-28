@@ -20,9 +20,7 @@ services:
     webserver:
         build:
             context: .
-            dockerfile: Dockerfile.dev
-        depends_on: 
-            - mysql
+            dockerfile: Dockerfile
         environment: 
             - DB_CONNECTION=mysql
             - DB_HOST=mysql
@@ -32,8 +30,8 @@ services:
             - DB_PASSWORD=root
         ports:
             - 80:80
-        volumes:
-            - ./src:/var/www/app
+        # volumes:
+        #     - ./src:/var/www/app:cached
 
     #
     # This workspace lets you run artisan and npm commands.
@@ -49,4 +47,4 @@ services:
         image: anterisdev/php-workspace:sha-2f305bd
         tty: true
         volumes:
-            - ./src:/var/www/app
+            - ./src:/var/www/app:cached

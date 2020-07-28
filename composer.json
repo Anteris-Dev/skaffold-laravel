@@ -14,5 +14,7 @@
         "skaffold",
         "docker"
     ],
-    "require": {}
+    "scripts": {
+        "post-create-project-cmd": "composer create-project laravel/laravel ./src"
+    }
 }
