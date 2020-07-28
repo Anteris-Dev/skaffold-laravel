@@ -24,7 +24,8 @@ services:
         depends_on: 
             - mysql
             - workspace
-        environment: 
+        environment:
+            - APP_ENV=local
             - DB_CONNECTION=mysql
             - DB_HOST=mysql
             - DB_PORT=3306
@@ -42,6 +43,7 @@ services:
     workspace:
         command: /bin/sh -c 'if [ ! "$$(ls -A /var/www/app)" ]; then composer create-project laravel/laravel /var/www/app; fi && php -a'
         environment:
+            - APP_ENV=local
             - DB_CONNECTION=mysql
             - DB_HOST=mysql
             - DB_PORT=3306
