@@ -11,17 +11,12 @@ FROM php:7.4-fpm-alpine
     COPY ./docker/nginx/global/conf.d/* /etc/nginx/conf.d
     COPY ./docker/php-fpm/development/conf.d/* /usr/local/etc/php/conf.d
 
-    # Copy Source Code
-    COPY --chown=www-data:www-data ./src /var/www/app
-
     # Override Working Directory
     RUN rm -rf /var/www/html
     WORKDIR /var/www/app
 
     # Override Entrypoint
-    # COPY ./docker/docker-entrypoint.sh /usr/local/bin
-    # COPY ./docker/env-example /var/www/app/env-example
-    # ENTRYPOINT ["docker-entrypoint.sh"]
+    ENTRYPOINT []
 
     # Add a new command
     CMD [ "/usr/bin/supervisord" , "-c", "/etc/supervisord.conf" ]
