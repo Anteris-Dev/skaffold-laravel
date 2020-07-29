@@ -41,7 +41,9 @@ services:
     # This workspace lets you run artisan and npm commands.
     #
     workspace:
-        command: /bin/sh -c 'if [ ! "$$(ls -A /var/www/app)" ]; then composer create-project laravel/laravel /var/www/app; fi && php -a'
+        build:
+            context: .
+            dockerfile: Dockerfile.workspace
         environment:
             - APP_ENV=local
             - DB_CONNECTION=mysql
@@ -50,7 +52,6 @@ services:
             - DB_DATABASE=laravel
             - DB_USERNAME=root
             - DB_PASSWORD=root
-        image: anterisdev/php-workspace:sha-2f305bd
         tty: true
         volumes:
             - ./src:/var/www/app:delegated
